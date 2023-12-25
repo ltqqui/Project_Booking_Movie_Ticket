@@ -39,7 +39,7 @@ const Register = (props: Props) => {
   })
   return (
     <div className={`register`} >
-    <form action="" className='form' onSubmit={frm.handleSubmit}>
+    <form action="" className='form_register' onSubmit={frm.handleSubmit}>
       <h3 className=''>Đăng ký</h3>
       <div className='taiKhoan' >
           <input onChange={frm.handleChange}  name='taiKhoan' type="text"   placeholder='Tên đăng nhập' />

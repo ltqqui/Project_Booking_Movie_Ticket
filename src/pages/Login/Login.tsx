@@ -24,7 +24,7 @@ function Login({}: Props) {
   })
   return (
     <div className={`login`}>
-    <form action="" className='form' onSubmit={frm.handleSubmit} >
+    <form action="" className='form__login' onSubmit={frm.handleSubmit} >
       <h3 >Đăng nhập</h3>
       <div className='taiKhoan'>
           <input name='taiKhoan' type="text"   placeholder='Tên đăng nhập' onChange={frm.handleChange} />
@@ -38,7 +38,7 @@ function Login({}: Props) {
       <div className='submit'>
           <button style={{background:'#fff', width:'100%', padding:'10px', borderRadius:'15px', fontWeight:'600', fontSize:'16px'}}>Đăng nhập</button>
       </div>
-      <div className='form_bottom'>
+      <div className='form_login_bottom'>
         <p className=''>Chưa có tài khoản ? <NavLink to='/register'  className=''>Đăng ký</NavLink></p>
       </div>
     </form>
