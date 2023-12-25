@@ -23,8 +23,8 @@ function Login({}: Props) {
      })
   })
   return (
-    <div className={`login`}>
-    <form action="" className='form__login' onSubmit={frm.handleSubmit} >
+    <div className='login'>
+    <form action="" className='form_login' onSubmit={frm.handleSubmit} >
       <h3 >Đăng nhập</h3>
       <div className='taiKhoan'>
           <input name='taiKhoan' type="text"   placeholder='Tên đăng nhập' onChange={frm.handleChange} />
