@@ -27,6 +27,7 @@
       font-size: 18px;
       border: 1px solid #000;
       font-weight: 400;
+      
       &:hover {
         transform: scale(1.1);
         transition: all 0.3s;
@@ -180,7 +181,7 @@
               display: flex;
               img {
                 width: 25%;
-                height: 70px;
+                height: 110px;
               }
               .infoFilm {
                 margin-left: 5px;
@@ -188,14 +189,14 @@
                 text-align: left;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: flex-end;
                 h5 {
                   margin-top: 15px;
                   font-size: 16px;
                 }
                 p {
                   // padding-bottom: 0 !important;
-                  margin-bottom: 0 !important;
+                  margin-bottom:5px !important;
                 }
               }
             }
@@ -221,10 +222,17 @@
                     border-radius: 2px;
                     background-color: #fff;
                     color: rgb(32, 32, 32);
-                    border: 1px solid;
+                    border: 1px solid #e1e1e1;
                     font-weight: 400;
+                    background-color: initial;
+                    color: #3ca1ff;
+                    cursor: pointer;
+                    outline: none;
+                    text-decoration: none;
+                    transition: color .3s;
                     &:hover {
                       color: rgb(94, 94, 247);
+                     border: 1px solid #3ca1ff;
                       transition: all 0.3s;
                     }
                   }
