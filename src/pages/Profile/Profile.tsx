@@ -114,7 +114,7 @@ const Profile = (props: Props) => {
       key: "1",
       label: <h5>THÔNG TIN TÀI KHOẢN</h5>,
       children: (
-        <form className="form" onSubmit={frm.handleSubmit}>
+        <form className="form_profile" onSubmit={frm.handleSubmit}>
           <p>Tài khoản</p>
           <input
             className="tai_khoan"

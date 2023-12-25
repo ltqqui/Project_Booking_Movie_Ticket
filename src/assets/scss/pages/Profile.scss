@@ -73,7 +73,7 @@
     }
     .profile_right {
       width: 75%;
-      form {
+      .form_profile {
         width: 100%;
         p {
           margin: 0;
@@ -264,7 +264,7 @@
       }
       .profile_right {
         width: 75%;
-        form {
+        .form_profile {
           width: 100%;
           p {
             margin: 0;
@@ -422,7 +422,7 @@
       }
       .profile_right {
         width: 75%;
-        form {
+        .form_profile {
           width: 100%;
           p {
             margin: 0;
@@ -594,7 +594,7 @@
           justify-content: center;
         }
         .info_table {
-          form {
+          .form_profile {
             width: 100%;
             p {
               margin: 0;
