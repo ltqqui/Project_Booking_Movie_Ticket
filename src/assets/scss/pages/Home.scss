@@ -1,0 +1,806 @@
+.home {
+  .carousel {
+    // height: 700px;
+    width: 100%;
+    padding-top: 5%;
+    .carousel-item {
+      // width: 100%;
+      height: 680px;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: inherit;
+      }
+    }
+  }
+  .dangChieuSapChieu {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    .dangChieu {
+      margin-right: 30px;
+    }
+    button {
+      padding: 10px 25px;
+      border-radius: 5px;
+      font-size: 18px;
+      border: 1px solid #000;
+      font-weight: 400;
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+      }
+    }
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .sliderSlick {
+      margin-bottom: 30px;
+      transition: all 0.5s;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      .slick-slide {
+        padding-left: 10px;
+      }
+      .slick-prev:before,
+      .slick-next:before {
+        color: gray;
+        background-color: #fff;
+        font-size: 50px !important;
+        &:hover {
+          color: #000 !important;
+        }
+      }
+      .slick-prev:before {
+        margin-left: -40px;
+        margin-top: -20px;
+        display: block;
+      }
+      .slick-next:before {
+        margin-left: 10px;
+        margin-top: -20px;
+        display: block;
+      }
+    }
+    .ant-tabs-left
+      > .ant-tabs-content-holder
+      > .ant-tabs-content
+      > .ant-tabs-tabpane,
+    .ant-tabs-left
+      > div
+      > .ant-tabs-content-holder
+      > .ant-tabs-content
+      > .ant-tabs-tabpane {
+      padding: 15px;
+    }
+    .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab,
+    .ant-tabs-right > .ant-tabs-nav .ant-tabs-tab,
+    .ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab,
+    .ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab {
+      // padding: 0px ;
+    }
+
+    .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+    .ant-tabs-right > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+    .ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+    .ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+      margin: 30px 0 0 0;
+    }
+    .ant-tabs-tab {
+      padding: 0;
+      padding-left: 10px;
+    }
+    .tabsFilms {
+      .ant-tabs > .ant-tabs-nav .ant-tabs-nav-more,
+      .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-more {
+        display: none;
+      }
+      width: 60%;
+      height: 600px;
+      margin-bottom: 100px;
+      .rap {
+        height: 600px;
+        .line {
+          display: none;
+        }
+        i {
+          display: none;
+        }
+        .phimMobile {
+          display: none;
+        }
+        .cumRap {
+          height: 100%;
+          width: 350px;
+          display: flex;
+          .infoCumRap {
+            width: 100%;
+            text-align: left;
+            padding-left: 5px;
+            h5 {
+              font-size: 16px;
+            }
+            p {
+              font-size: 13px;
+              display: block;
+              word-wrap: break-word;
+              color: #000;
+            }
+            .BHDStar {
+              color: rgb(139, 197, 65);
+            }
+            .CGV {
+              color: rgb(231, 26, 15);
+            }
+          }
+
+          .Galaxy {
+            color: rgb(255, 117, 26);
+          }
+          .LotteCinima {
+            color: rgb(207, 84, 75);
+          }
+          .CineStar {
+            color: rgb(223, 13, 122);
+          }
+          .MegaGS {
+            color: rgb(238, 183, 48);
+          }
+        }
+        .tabInfoFilms {
+          color: #000;
+          height: 550px !important;
+          overflow-y: scroll;
+          .ant-tabs-nav {
+            display: block;
+            width: 100%;
+          }
+          .ant-tabs-content-holder {
+            display: none !important;
+          }
+          .ant-tabs-tab-btn {
+            width: 100% !important;
+          }
+          .phim {
+            color: #000;
+            width: 100%;
+            hr {
+              height: 2px;
+              background-image: linear-gradient(to right, #fff, gray, #fff);
+            }
+            .filmItem {
+              display: flex;
+              img {
+                width: 25%;
+                height: 70px;
+              }
+              .infoFilm {
+                margin-left: 5px;
+                width: 100%;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h5 {
+                  margin-top: 15px;
+                  font-size: 16px;
+                }
+                p {
+                  // padding-bottom: 0 !important;
+                  margin-bottom: 0 !important;
+                }
+              }
+            }
+            .lichNgayChieu {
+              p {
+                text-align: left;
+                margin-top: 15px;
+                font-weight: 500;
+              }
+              .lichChieu {
+                margin-top: 10px;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .gioChieu {
+                  display: flex;
+                  justify-content: flex-start;
+                  margin-bottom: 10px;
+                  width: 30%;
+
+                  div {
+                    padding: 3px;
+                    border-radius: 2px;
+                    background-color: #fff;
+                    color: rgb(32, 32, 32);
+                    border: 1px solid;
+                    font-weight: 400;
+                    &:hover {
+                      color: rgb(94, 94, 247);
+                      transition: all 0.3s;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .tinTuc {
+      width: 60%;
+      .ant-tabs,
+      .ant-tabs-top {
+        width: 100%;
+      }
+      .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
+      .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+        justify-content: center;
+      }
+      .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        font-size: 18px !important;
+      }
+      .ant-tabs-tab-btn {
+        font-size: 18px !important;
+      }
+      .dienAnh24h {
+        display: flex;
+        justify-content: space-between;
+        
+        .cardDienAnh {
+          width: 49%;
+          height: 300px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            .card-body {
+              h4 {
+                display: block !important;
+              }
+              span {
+                display: inline !important;
+              }
+            }
+          }
+          &:hover {
+            h4 {
+              display: block;
+            }
+            p {
+              display: block !important;
+            }
+          }
+        }
+      }
+      .review {
+        display: flex;
+        justify-content: space-between;
+
+        .cardReview {
+          width: 49%;
+          height: 300px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            .card-body {
+              h4 {
+                display: block !important;
+              }
+              span {
+                display: inline !important;
+              }
+            }
+          }
+          &:hover {
+            h4 {
+              display: block;
+            }
+            p {
+              display: block !important;
+            }
+          }
+        }
+      }
+    }
+    padding: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px !important;
+    background-color: #fff !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: grey !important;
+    border-radius: 5px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home {
+    .carousel {
+      // padding-top: 60px;
+    }
+    .body {
+      .sliderSlick {
+        width: 70% !important;
+      }
+      .tabsFilms {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .home {
+    .carousel {
+      // padding-top: 60px;
+    }
+    .body {
+      // display: none;
+      .sliderSlick {
+        width: 75% !important;
+      }
+      .tabsFilms {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    .carousel {
+      padding-top: 0;
+      .carousel-item {
+        height: 400px;
+      }
+    }
+    .body {
+      .sliderSlick {
+        width: 78% !important;
+      }
+      .tabsFilms {
+        .ant-tabs > .ant-tabs-nav .ant-tabs-nav-more,
+        .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-more {
+          display: none;
+        }
+        width: 100%;
+        height: 600px;
+        margin-bottom: 100px;
+        .rap {
+          height: 600px;
+          .cumRap {
+            height: 100%;
+            width: 300px;
+            display: flex;
+            .infoCumRap {
+              width: 100%;
+              text-align: left;
+              padding-left: 5px;
+              h5 {
+                font-size: 14px;
+              }
+              p {
+                font-size: 12px;
+                display: block;
+                word-wrap: break-word;
+                color: #000;
+              }
+              .BHDStar {
+                color: rgb(139, 197, 65);
+              }
+              .CGV {
+                color: rgb(231, 26, 15);
+              }
+            }
+
+            .Galaxy {
+              color: rgb(255, 117, 26);
+            }
+            .LotteCinima {
+              color: rgb(207, 84, 75);
+            }
+            .CineStar {
+              color: rgb(223, 13, 122);
+            }
+            .MegaGS {
+              color: rgb(238, 183, 48);
+            }
+          }
+          .tabInfoFilms {
+            color: #000;
+            height: 550px !important;
+            overflow-y: scroll;
+            .ant-tabs-nav {
+              display: block;
+              width: 100%;
+            }
+            .ant-tabs-content-holder {
+              display: none !important;
+            }
+            .ant-tabs-tab-btn {
+              width: 100% !important;
+            }
+            .phim {
+              color: #000;
+              width: 100%;
+              hr {
+                height: 2px;
+                background-image: linear-gradient(to right, #fff, gray, #fff);
+              }
+              .filmItem {
+                display: flex;
+                word-wrap: break-word !important;
+                img {
+                  width: 20%;
+                  height: 70px;
+                }
+                .infoFilm {
+                  margin-left: 5px;
+                  width: 100%;
+                  text-align: left;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  h5 {
+                    display: flex;
+                    margin-top: 15px;
+                    font-size: 14px;
+                  }
+                  p {
+                    // padding-bottom: 0 !important;
+                    margin-bottom: 0 !important;
+                  }
+                }
+              }
+              .lichNgayChieu {
+                p {
+                  text-align: left;
+                  margin-top: 15px;
+                  font-weight: 500;
+                }
+                .lichChieu {
+                  margin-top: 10px;
+                  display: flex;
+                  justify-content: flex-start;
+                  flex-wrap: wrap;
+                  .gioChieu {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: 10px;
+                    width: 50%;
+
+                    a {
+                      padding: 3px;
+                      border-radius: 2px;
+                      background-color: #fff;
+                      color: rgb(32, 32, 32);
+                      border: 1px solid;
+                      font-weight: 400;
+                      &:hover {
+                        color: rgb(94, 94, 247);
+                        transition: all 0.3s;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .tinTuc {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    .carousel {
+      padding: 0%;
+      .carousel-item {
+        height: 300px;
+      }
+    }
+    .body {
+      .sliderSlick {
+        display: none;
+      }
+      .cardMobileRow {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        .cardMobile {
+          cursor: pointer;
+          position: relative;
+          width: 100%;
+          height: 250px;
+          margin-bottom: 20px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+          }
+          span {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff;
+            background-color: rgb(251, 66, 38);
+            border-radius: 3px;
+            padding: 2px 4px;
+          }
+        }
+        .xemThem {
+          margin-top: 10px;
+          padding: 10px 30px;
+          border-radius: 3px;
+          font-weight: 600;
+          font-size: 14px;
+          color: gray;
+          background-color: #fff;
+          border: 1px solid #000;
+          &:hover {
+            border: 1px solid rgb(251, 66, 38);
+            transition: all 0.3s;
+            background-color: rgb(251, 66, 38);
+            color: #fff;
+          }
+        }
+      }
+      .tabsFilms {
+        .ant-tabs > .ant-tabs-nav .ant-tabs-nav-more,
+        .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-more {
+          display: none;
+        }
+        width: 95%;
+        height: 600px;
+        margin-bottom: 100px;
+        .rap {
+          height: 600px;
+          .line {
+            display: block;
+            // color: #dfdfdf;
+          }
+          i {
+            display: block;
+          }
+          .ant-tabs-tab-btn {
+            width: 100%;
+          }
+          .hidePhimMobile {
+            display: none;
+          }
+          .phimMobile {
+            padding: 15px;
+            .filmItemMobile {
+              display: flex;
+              // justify-content: space-around;
+              .infoFilmMobile {
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h5 {
+                  margin-top: 15px;
+                  font-size: 15px;
+                  text-align: left;
+                }
+                p {
+                  text-align: left;
+                  color: #000;
+                }
+              }
+            }
+            .lichNgayChieu {
+              .lichChieu {
+                margin-top: 10px;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .gioChieu {
+                  display: flex;
+                  justify-content: flex-start;
+                  margin-bottom: 10px;
+                  width: 30%;
+                  // display: flex;
+                  div {
+                    padding: 3px;
+                    border-radius: 2px;
+                    background-color: #fff;
+                    color: rgb(32, 32, 32);
+                    border: 1px solid;
+                    font-weight: 400;
+                    cursor: pointer !important;
+                    &:hover {
+                      color: rgb(94, 94, 247);
+                      transition: all 0.3s;
+                    }
+                  }
+                }
+              }
+              p {
+                text-align: left !important;
+                color: #000;
+              }
+            }
+          }
+          .cumRap {
+            height: 100%;
+            width: 300px;
+            display: flex;
+            // border-bottom: 1px solid;
+            .infoCumRap {
+              width: 100%;
+              width: 100%;
+              text-align: left;
+              padding-left: 5px;
+              h5 {
+                font-size: 14px;
+              }
+              p {
+                font-size: 12px;
+                display: block;
+                word-wrap: break-word;
+                color: #000;
+              }
+              .BHDStar {
+                color: rgb(139, 197, 65);
+              }
+              .CGV {
+                color: rgb(231, 26, 15);
+              }
+            }
+
+            .Galaxy {
+              color: rgb(255, 117, 26);
+            }
+            .LotteCinima {
+              color: rgb(207, 84, 75);
+            }
+            .CineStar {
+              color: rgb(223, 13, 122);
+            }
+            .MegaGS {
+              color: rgb(238, 183, 48);
+            }
+          }
+          .ant-tabs-nav {
+            width: 100% !important;
+          }
+          .ant-tabs-content-holder {
+            display: none !important;
+          }
+          .tabInfoFilms {
+            display: none !important;
+            color: #000;
+            height: 550px !important;
+            overflow-y: scroll;
+            display: none;
+
+            .ant-tabs-tab-btn {
+              width: 100%;
+            }
+            .phim {
+              color: #000;
+              width: 100%;
+              hr {
+                height: 2px;
+                background-image: linear-gradient(to right, #fff, gray, #fff);
+              }
+              .filmItem {
+                display: flex;
+                word-wrap: break-word !important;
+                img {
+                  width: 20%;
+                  height: 70px;
+                }
+                .infoFilm {
+                  margin-left: 5px;
+                  width: 100%;
+                  text-align: left;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  h5 {
+                    display: flex;
+                    margin-top: 15px;
+                    font-size: 14px;
+                  }
+                  p {
+                    // padding-bottom: 0 !important;
+                    margin-bottom: 0 !important;
+                  }
+                }
+              }
+              .lichNgayChieu {
+                p {
+                  text-align: left;
+                  margin-top: 15px;
+                  font-weight: 500;
+                }
+                .lichChieu {
+                  margin-top: 10px;
+                  display: flex;
+                  justify-content: flex-start;
+                  flex-wrap: wrap;
+                  .gioChieu {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: 10px;
+                    width: 30%;
+
+                    a {
+                      padding: 3px;
+                      border-radius: 2px;
+                      background-color: #fff;
+                      color: rgb(32, 32, 32);
+                      border: 1px solid;
+                      font-weight: 400;
+                      &:hover {
+                        color: rgb(94, 94, 247);
+                        transition: all 0.3s;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .tinTuc {
+        .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+          font-size: 14px !important;
+        }
+        .ant-tabs-tab-btn {
+          font-size: 14px !important;
+        }
+        .dienAnh24h {
+          display: block;
+          .cardDienAnh {
+            width: 100%;
+            height: 250px;
+            // margin: 100px 0;
+          }
+          .cardDienAnh:last-child {
+            margin-top: 100px;
+          }
+        }
+        .review {
+          display: block;
+          .cardReview {
+            width: 100%;
+            height: 250px;
+            // margin: 100px 0;
+          }
+          .cardReview:last-child {
+            margin-top: 100px;
+          }
+        }
+      }
+    }
+  }
+}

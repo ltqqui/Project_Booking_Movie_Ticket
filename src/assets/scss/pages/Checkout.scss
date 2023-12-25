@@ -1,0 +1,450 @@
+.checkout {
+  height: 100%;
+  display: flex;
+  ::-webkit-scrollbar {
+    width: 1px !important;
+    height: 8px !important;
+    background-color: #fff !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: grey !important;
+    border-radius: 3px !important;
+  }
+  .content_left {
+    width: 70%;
+    .name_time {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10%;
+      .info {
+        font-size: 25px;
+        font-weight: 500;
+      }
+      .time {
+        font-size: 25px;
+        color: #fb4226;
+        font-weight: 500;
+      }
+    }
+    .room {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .screen {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+      .list_seats {
+        overflow-x: scroll;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap !important;
+        .ghe {
+          width: 5%;
+          height: 30px !important;
+          border-radius: 5px;
+          cursor: pointer;
+          margin: 6px;
+          background-color: rgb(123, 122, 122);
+          color: #fff;
+          border: none;
+        }
+        .gheDaDat {
+          background-color: rgb(234, 124, 124);
+          cursor: no-drop;
+        }
+        .gheDangDat {
+          background-color: rgb(18, 176, 78) !important;
+        }
+        .gheVip {
+          background-color: rgb(228, 74, 8);
+          color: rgb(237, 231, 192) !important;
+        }
+
+        .gheTuDat {
+          background-color: #fff;
+          border: 1px solid orange;
+          box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        .gheKhachDat {
+          background-color: rgb(184, 41, 184);
+
+          cursor: no-drop;
+        }
+      }
+      .checkout_note {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        .note_item {
+          width: 100%;
+          text-align: center;
+          font-weight: 400;
+          color: #9b9b9b;
+          .ghe {
+            border: none;
+            width: 20%;
+            height: 35px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 6px;
+            background-color: rgb(123, 122, 122);
+            color: #fff;
+          }
+          .gheDaDat {
+            background-color: rgb(234, 124, 124);
+            cursor: no-drop;
+          }
+          .gheDangDat {
+            background-color: rgb(18, 176, 78) !important;
+          }
+          .gheVip {
+            background-color: rgb(228, 74, 8);
+          }
+
+          .gheTuDat {
+            background-color: #fff;
+            border: 1px solid orange;
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+          }
+        }
+      }
+    }
+  }
+  .content_right {
+    position: absolute;
+    z-index: 100;
+    width: 30%;
+    height: 110vh !important ;
+    overflow-y: scroll;
+    top: -15%;
+    right: 0;
+    box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.51);
+    background-color: #fff;
+    padding: 0 20px;
+    .money_total {
+      text-align: center;
+      padding: 10px 0;
+      font-size: 40px;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+      font-weight: 500;
+      color: #44c020;
+    }
+    .info_film {
+      padding: 20px 0;
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 0;
+        margin-bottom: 5px;
+      }
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+    }
+    .total_seats {
+      padding: 20px 0;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+      span {
+        color: #fb4226;
+        font-size: 18px;
+      }
+    }
+    .email {
+      span {
+        color: rgb(155, 155, 155);
+        font-size: 13px;
+      }
+      p {
+        font-size: 16px;
+      }
+      padding: 10px 0;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+    }
+    .phone {
+      span {
+        color: rgb(155, 155, 155);
+        font-size: 13px;
+      }
+      p {
+        font-size: 16px;
+      }
+      padding: 10px 0;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+    }
+    .hinh_thuc_thanh_toan {
+      span {
+        color: rgb(155, 155, 155);
+        font-size: 16px;
+      }
+      padding: 10px 0;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+    }
+    img {
+      width: 40px;
+    }
+    .ant-radio-group {
+      span {
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+    button {
+      width: 100%;
+      padding: 10px 0;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      background-color: rgb(175, 175, 175);
+      color: #fff;
+    }
+    .active_dat_ve {
+      background-image: linear-gradient(
+        223deg,
+        rgb(180, 236, 81) 0px,
+        rgb(66, 147, 33) 100%
+      );
+      color: #fff;
+    }
+  }
+  .ant-modal {
+    display: none !important;
+  }
+}
+
+@media screen and(max-width : 600px) {
+  .checkout {
+    flex-direction: column;
+    .content_left {
+      width: 100%;
+      .room {
+        .list_seats {
+          overflow-x: scroll;
+          width: 100%;
+          text-align: center;
+          white-space: nowrap !important;
+          .ghe {
+            width: 7%;
+            height: 30px !important;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 6px;
+            background-color: rgb(123, 122, 122);
+            color: #fff;
+            border: none;
+          }
+          .gheDaDat {
+            background-color: rgb(234, 124, 124);
+            cursor: no-drop;
+          }
+          .gheDangDat {
+            background-color: rgb(18, 176, 78) !important;
+          }
+          .gheVip {
+            background-color: rgb(228, 74, 8);
+            color: rgb(237, 231, 192) !important;
+          }
+
+          .gheTuDat {
+            background-color: #fff;
+            border: 1px solid orange;
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+          }
+
+          .gheKhachDat {
+            background-color: rgb(184, 41, 184);
+
+            cursor: no-drop;
+          }
+        }
+        .checkout_note {
+          width: 100%;
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+          .note_item {
+            width: 100%;
+            text-align: center;
+            font-weight: 400;
+            color: #9b9b9b;
+            font-size: 13px;
+            .ghe {
+              border: none;
+              width: 35%;
+              height: 35px;
+              border-radius: 5px;
+              cursor: pointer;
+              margin: 6px;
+              background-color: rgb(123, 122, 122);
+              color: #fff;
+            }
+            .gheDaDat {
+              background-color: rgb(234, 124, 124);
+              cursor: no-drop;
+            }
+            .gheDangDat {
+              background-color: rgb(18, 176, 78) !important;
+            }
+            .gheVip {
+              background-color: rgb(228, 74, 8);
+            }
+
+            .gheTuDat {
+              background-color: #fff;
+              border: 1px solid orange;
+              box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+              -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+              -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+            }
+          }
+        }
+      }
+    }
+    .content_right {
+      bottom: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+    }
+    .content_right_mobile {
+      display: flex !important;
+      justify-content: space-between;
+      position: absolute;
+      bottom: -10%;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      border: 1px solid rgb(230, 228, 228);
+      background-color: #fff;
+
+      p {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        color: #44c020;
+      }
+      button {
+        width: 50%;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        background-color: rgb(175, 175, 175);
+        color: #fff;
+      }
+      .active_tiep_tuc {
+        background-color: #44c020;
+      }
+    }
+  }
+  .content_modal {
+    .money_total {
+      text-align: center;
+      padding: 10px 0;
+      font-size: 35px;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+      font-weight: 500;
+      color: #44c020;
+    }
+    .info_film {
+      padding: 20px 0;
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 0;
+        margin-bottom: 5px;
+      }
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+    }
+    .total_seats {
+      padding: 20px 0;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+      span {
+        color: #fb4226;
+        font-size: 18px;
+      }
+    }
+    .email {
+      span {
+        color: rgb(155, 155, 155);
+        font-size: 13px;
+      }
+      p {
+        font-size: 16px;
+      }
+      padding: 10px 0;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+    }
+    .phone {
+      span {
+        color: rgb(155, 155, 155);
+        font-size: 13px;
+      }
+      p {
+        font-size: 16px;
+      }
+      padding: 10px 0;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+    }
+    .hinh_thuc_thanh_toan {
+      span {
+        color: rgb(155, 155, 155);
+        font-size: 16px;
+      }
+      padding: 10px 0;
+      border-bottom: 0.5px solid rgb(240, 239, 239);
+    }
+    img {
+      width: 40px;
+    }
+    .ant-radio-group {
+      span {
+        color: #000;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+    button {
+      width: 100%;
+      padding: 10px 0;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      background-color: rgb(175, 175, 175);
+      color: #fff;
+    }
+    .active_dat_ve {
+      background-image: linear-gradient(
+        223deg,
+        rgb(180, 236, 81) 0px,
+        rgb(66, 147, 33) 100%
+      );
+      color: #fff;
+    }
+  }
+  .ant-modal-title{
+    font-size: 25px;
+    text-align: center;
+  }
+  .ant-modal-footer {
+    display: none !important;
+  }
+}

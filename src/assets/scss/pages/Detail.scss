@@ -1,0 +1,436 @@
+.detail {
+  background-color: rgb(10, 32, 41);
+  height: 1400px !important;
+  .glassmorphism {
+    .glass_top {
+      width: 100%;
+      height: 105%;
+      display: flex;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+      .detail_top {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        .detail_top_left {
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .info_detail_left {
+            img {
+              width: 200px;
+            }
+          }
+          .info_detail_right {
+            margin-left: 15px;
+            p {
+              color: #fff;
+              font-size: 16px;
+            }
+            h5 {
+              color: #fff;
+              font-size: 23px;
+            }
+            span {
+              font-size: 16px;
+              font-weight: 400;
+              color: #fff;
+              background-color: rgb(251, 66, 38);
+              border-radius: 3px;
+              padding: 3px 10px;
+            }
+            a {
+              color: #fff;
+              border: none;
+              padding: 11px 25px;
+              font-size: 16px;
+              background: 0 0;
+              margin-top: 25px;
+              transition: all 0.2s;
+              border-radius: 4px;
+              margin-bottom: 20px;
+              background-color: #fb4226;
+            }
+          }
+        }
+        .detail_top_right {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .rating {
+          }
+        }
+      }
+    }
+    .detail_bottom {
+      margin-top: -25px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .tab_Detail_lich_chieu {
+        width: 50%;
+        height: 600px ;
+        .tab_item_lich_chieu {
+          .ant-tabs-content-holder {
+            display: none;
+          }
+          .ant-tabs-nav {
+            width: 100%;
+          }
+          .ant-tabs-tab-btn {
+            width: 100%;
+          }
+        }
+        .ant-tabs-content-holder {
+          background-color: #fff !important;
+          height: 500px;
+          overflow-y: scroll;
+          border-radius: 5px;
+          ::-webkit-scrollbar {
+            width: 5px !important;
+            background-color: #fff !important;
+        }
+        
+        ::-webkit-scrollbar-thumb{
+            background-color: grey !important;
+            border-radius: 5px !important;
+        } 
+        }
+      }
+      .tab_Detail_thong_tin {
+        width: 50%;
+        color: #fff;
+        .tab_item_thong_tin {
+          display: flex;
+          justify-content: space-between;
+          .thong_tin_left {
+            width: 50%;
+          }
+          .thong_tin_right {
+            width: 50%;
+          }
+        }
+        .ant-tabs-content-holder {
+          background: inherit;
+        }
+      }
+
+      .ant-tabs-ink-bar,
+      .ant-tabs-ink-bar-animated {
+        background-color: #fb4226;
+      }
+      .ant-tabs-left > .ant-tabs-nav .ant-tabs-ink-bar,
+      .ant-tabs-left > div > .ant-tabs-nav .ant-tabs-ink-bar {
+        display: none;
+      }
+      .ant-tabs-top > .ant-tabs-nav::before,
+      .ant-tabs-bottom > .ant-tabs-nav::before,
+      .ant-tabs-top > div > .ant-tabs-nav::before,
+      .ant-tabs-bottom > div > .ant-tabs-nav::before {
+        display: none;
+      }
+      .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
+      .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+        justify-content: center;
+        h4 {
+          color: #fff;
+        }
+
+        .cumRap {
+          display: flex;
+          img {
+            width: 100px;
+          }
+          .infoCumRap {
+            text-align: left;
+            margin-left: 10px;
+            h5 {
+              // color: #fff;
+              font-size: 18px;
+            }
+            p {
+              color: #000;
+            }
+            .BHDStar {
+              color: rgb(139, 197, 65);
+            }
+            .CGV {
+              color: rgb(231, 26, 15);
+            }
+
+            .Galaxy {
+              color: rgb(255, 117, 26);
+            }
+            .LotteCinima {
+              color: rgb(207, 84, 75);
+            }
+            .CineStar {
+              color: rgb(223, 13, 122);
+            }
+            .MegaGS {
+              color: rgb(238, 183, 48);
+            }
+            .gio_chieu{
+              a {
+                padding: 5px;
+                border-radius: 2px;
+                background-color: #fff;
+                color: rgb(72, 72, 72);
+                outline: 1px solid rgb(94, 94, 247);
+                border: none;
+                font-weight: 400;
+                cursor: pointer !important;
+                &:hover {
+                  color: rgb(94, 94, 247);
+                  transition: all 0.3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bg_bottom {
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .detail_top {
+    width: 70% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detail_top {
+    width: 90% !important;
+  }
+  .detail_bottom {
+    .tab_Detail_lich_chieu {
+      width: 80% !important;
+    }
+    .tab_Detail_thong_tin {
+      width: 80% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .detail {
+    height: 800px !important;
+    background-color: #fff !important;
+    .glassmorphism {
+      height: 60% !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .glass_mobile {
+        height: 60%;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: linear-gradient(
+          to top,
+          rgba(10, 32, 41, 2),
+          rgba(10, 32, 41, 1),
+          rgba(10, 32, 41, 1),
+          rgba(10, 32, 41, 1),
+          rgba(10, 32, 41, 0.8),
+          rgba(10, 32, 41, 0.2),
+          rgba(10, 32, 41, 0)
+        );
+        img {
+          position: absolute;
+          top: 25%;
+          left: 40%;
+          cursor: pointer;
+        }
+        iframe {
+          width: 100% !important;
+          position: absolute;
+          top: 10%;
+          // left:10%
+        }
+        .info_phim_mobile {
+          margin-bottom: 60px;
+
+          p {
+            color: #fff;
+            font-size: 16px;
+          }
+          h5 {
+            color: #fff;
+            font-size: 23px;
+            display: flex;
+            align-items: flex-end;
+          }
+          span {
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff;
+            background-color: rgb(251, 66, 38);
+            border-radius: 3px;
+            padding: 3px 10px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .glass_top {
+        display: none !important;
+        width: 100%;
+        height: 500px !important;
+      }
+      .detail_bottom {
+        display: none !important;
+      }
+    }
+    .tab_Detail_lich_chieu_mobile {
+      margin-top: -65px;
+      display: block !important ;
+      display: flex;
+      justify-content: center;
+      height: 350px !important;
+      width: 100% !important;
+      ::-webkit-scrollbar {
+        width: 0px !important;
+        background-color: #fff !important;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background-color: grey !important;
+        border-radius: 5px !important;
+    } 
+      .ant-tabs-content-holder {
+        height: 400px !important;
+        overflow-y: scroll;
+      
+      }
+      .tab_Detail_mobile_thong_tin {
+        .ant-tabs-content-holder {
+          background-color: #0a2029 !important;
+          height: 500px;
+          border-radius: 5px;
+          color: #fff;
+          height: 100%;
+        }
+      }
+      .ant-tabs > .ant-tabs-nav,
+      .ant-tabs > div > .ant-tabs-nav {
+        width: 100% !important;
+        padding: 0 7px;
+      }
+      .tab_Detail_lich_chieu {
+        width: 50%;
+        .tab_item_lich_chieu {
+          .ant-tabs-content-holder {
+            display: none;
+          }
+          .ant-tabs-tab-btn {
+            width: 100%;
+          }
+        }
+        .ant-tabs-content-holder {
+          background-color: #fff !important;
+          height: 500px;
+          border-radius: 5px;
+        }
+      }
+      .tab_Detail_thong_tin {
+        width: 50%;
+        // color: #fff;
+        .tab_item_thong_tin {
+          display: flex;
+          justify-content: space-between;
+          .thong_tin_left {
+            width: 50%;
+          }
+          .thong_tin_right {
+            width: 50%;
+          }
+        }
+        .ant-tabs-content-holder {
+          background: inherit;
+        }
+      }
+
+      .ant-tabs-ink-bar,
+      .ant-tabs-ink-bar-animated {
+        background-color: #fb4226;
+      }
+      .ant-tabs-left > .ant-tabs-nav .ant-tabs-ink-bar,
+      .ant-tabs-left > div > .ant-tabs-nav .ant-tabs-ink-bar {
+        display: none;
+      }
+      .ant-tabs-top > .ant-tabs-nav::before,
+      .ant-tabs-bottom > .ant-tabs-nav::before,
+      .ant-tabs-top > div > .ant-tabs-nav::before,
+      .ant-tabs-bottom > div > .ant-tabs-nav::before {
+        display: none;
+      }
+      .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab,
+      .ant-tabs-right > .ant-tabs-nav .ant-tabs-tab,
+      .ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab,
+      .ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab {
+        padding: 0 !important;
+      }
+      .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
+      .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+        justify-content: center;
+        h4 {
+          color: #fff;
+        }
+        .cumRap {
+          display: flex;
+          img {
+            width: 100px;
+          }
+          .infoCumRap {
+            text-align: left;
+            margin-left: 10px;
+            h5 {
+              // color: #fff;
+              font-size: 18px;
+            }
+            p {
+              color: #000;
+            }
+            .BHDStar {
+              color: rgb(139, 197, 65);
+            }
+            .CGV {
+              color: rgb(231, 26, 15);
+            }
+
+            .Galaxy {
+              color: rgb(255, 117, 26);
+            }
+            .LotteCinima {
+              color: rgb(207, 84, 75);
+            }
+            .CineStar {
+              color: rgb(223, 13, 122);
+            }
+            .MegaGS {
+              color: rgb(238, 183, 48);
+            }
+            a {
+              padding: 5px;
+              border-radius: 2px;
+              background-color: #fff;
+              color: rgb(72, 72, 72);
+              outline: 1px solid rgb(94, 94, 247);
+              border: none;
+              font-weight: 400;
+              cursor: pointer !important;
+              &:hover {
+                color: rgb(94, 94, 247);
+                transition: all 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

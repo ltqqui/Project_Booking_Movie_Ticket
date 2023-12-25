@@ -1,19 +1,71 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "antd/dist/antd.css";
+import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import {
+  Routes,
+  Route,
+  unstable_HistoryRouter as HistoryBrowser,
+} from "react-router-dom";
+import { store } from "./redux/configStore";
+import Home from "./pages/Home/Home";
+import { history } from "./utils/lib/libs";
+import HomeTemplate from "./templates/HomeTemplate/HomeTemplate";
+import Login from "./pages/Login/Login";
+import "./assets/scss/style.scss";
+import UserTemplate from "./templates/UserTemplate/UserTemplate";
+import Register from "./pages/Register/Register";
+import Loading from "./components/Loading/Loading";
+import Detail from "./pages/Detail/Detail";
+import CheckoutTemplate from "./templates/CheckoutTemplate/CheckoutTemplate";
+import Checkout from "./pages/Checkout/Checkout";
+import Profile from "./pages/Profile/Profile";
+import ManageTemplate from "./templates/ManageTemplate/ManageTemplate";
+import ManageUser from "./pages/ManageUser/ManageUser";
+import ManageFilm from "./pages/ManageFilm/ManageFilm";
+import EditUser from "./pages/EditUser/EditUser";
+import AddUser from "./pages/AddUser/AddUser";
+import EditFilm from "./pages/EditFilm/EditFilm";
+import AddFilm from "./pages/AddFlim/AddFilm";
+import Showtime from "./pages/Showtime/Showtime";
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <Loading />
+    <HistoryBrowser history={history}>
+      <Routes>
+        <Route path="" element={<HomeTemplate />}>
+          <Route index element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="home" element={<Home />}></Route>
+          <Route path="detail">
+            <Route path=":id" element={<Detail />}></Route>
+          </Route>
+        </Route>
+        <Route path="" element={<UserTemplate />}>
+          <Route path="login" element={<Login />}></Route>
+          <Route path="register" element={<Register />}></Route>
+          <Route path="profile" element={<Profile />}></Route>
+        </Route>
+        <Route path="checkout">
+          <Route path=":id" element={<CheckoutTemplate />}></Route>
+        </Route>
+        <Route path="manage" element={<ManageTemplate />}>
+          <Route path="manageUser" element={<ManageUser />}></Route>
+          <Route path="manageUser/editUser/:account" element={<EditUser />}></Route>
+          <Route path="manageUser/addUser" element={<AddUser />}></Route>
+          <Route path="manageFilm" element={<ManageFilm />}></Route>
+          <Route path="manageFilm/addFilm" element={<AddFilm />}></Route>
+          <Route path="manageFilm/editFilm/:idFilm" element={<EditFilm />}></Route>
+          <Route path="manageFilm/showtime/:idFilm" element={<Showtime />}></Route>
+        </Route>
+      </Routes>
+    </HistoryBrowser>
+  </Provider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

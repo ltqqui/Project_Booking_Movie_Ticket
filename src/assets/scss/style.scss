@@ -1,0 +1,32 @@
+@import './base/base.scss';
+
+
+//components
+@import './components/Header/Header.scss';
+@import './components/Footer/Footer.scss';
+@import './components/Card/Card.scss';
+@import './components/Loading/Loading.scss';
+@import './components/Cricel/Cricle.scss';
+@import './components/CheckoutHeader/CheckoutHeader.scss';
+
+
+//template
+@import './templates/UserTemplate.scss';
+@import './templates/ManageTemplate.scss';
+
+//pages 
+
+@import './pages/Home.scss';
+@import './pages/Login.scss';
+@import './pages/Register.scss';
+@import './pages/Detail.scss';
+@import './pages/Checkout.scss';
+@import './pages/InforCheckout.scss';
+@import './pages/Profile.scss';
+@import './pages/ManageUser.scss';
+@import './pages/EditUser.scss';
+@import './pages/AddUser.scss';
+@import './pages/ManageFilm.scss';
+@import './pages/EditFilm.scss';
+@import './pages/AddFilm.scss';
+@import './pages/Showtime.scss';

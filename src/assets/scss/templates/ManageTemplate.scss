@@ -1,0 +1,296 @@
+.manageTemplate {
+  #components-layout-demo-custom-trigger .trigger {
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 64px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  #components-layout-demo-custom-trigger .trigger:hover {
+    color: #1890ff;
+  }
+  .ant-layout-sider-children {
+    background-color: #fff;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #3f51b5;
+    padding: 10px;
+    img {
+      cursor: pointer;
+      width: 25%;
+    }
+  }
+  .ant-layout-header {
+    background-color: #3f51b5 !important;
+    height: 65px;
+  }
+  .site-layout .site-layout-background {
+    position: relative;
+    background: #fff;
+    .icon_bar{
+      position: absolute;
+      display: none;
+      right: 20px;
+      i{
+        font-size: 20px;
+      }
+    }
+  }
+  header{
+    .anticon,.anticon-menu-fold,.trigger {
+      svg {
+        display: none;
+      }
+  }
+  }
+  .info_user {
+    height: 200px !important;
+  }
+  .ant-menu-dark.ant-menu-inline, .ant-menu-dark.ant-menu-vertical, .ant-menu-dark.ant-menu-vertical-left, .ant-menu-dark.ant-menu-vertical-right {
+    background-color: #fff;
+  }
+
+  .ant-menu, .ant-menu-root ,.ant-menu-inline, .ant-menu-light li:first-child{
+      margin-top: 0;
+    padding-left: 0 !important;
+    padding: 20px;    
+    background-color: #fff !important;
+    height: 200px;
+  }
+  ul {
+      background-color: #fff;
+      li{
+        color: #000;
+      }
+    li:first-child {
+      .info_user {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            margin-top: 25px;
+          width: 50%;
+          border-radius: 50%;
+        }
+        h3 {
+          color: #000 !important;
+          text-align: center;
+          font-size: 25px;
+          font-weight: 400;
+          margin: 0;
+        }
+        p {
+            padding: 0;
+            margin: 0;
+            color: rgba(0, 0, 0, 0.54) !important;
+            text-align: center;
+            font-size: 16px;
+          }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:600px) {
+ .manageTemplate{
+  .ant-layout-sider{
+    display: none;
+  }
+  .site-layout .site-layout-background {
+    position: relative;
+    .icon_bar{
+      position: absolute;
+      display: block !important;
+      right: 20px;
+      top: 0;
+      i{
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    .OpenDrawMenu {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #fff;
+      animation: openDraw 0.3s 1;
+      display: block !important;
+      .OpenDrawMenuItem {
+        margin-bottom: 170px;
+        background-color: #fff;
+        height: 100px;
+        display: flex !important;
+        flex-direction: column-reverse;
+        .profile {
+          width: 100%;
+          margin-top: 20px;
+          display: flex !important;
+          flex-direction: column;
+          align-items: center;
+          height: 40%;
+          padding: 0 10px !important;
+          img {
+            border-radius: 50%;
+            width: 60%;
+            margin-right: 5px;
+          }
+          h3 {
+            color: #000 !important;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 10px;
+          }
+          p {
+              padding: 0 !important;
+              margin: 0;
+              color: rgba(0, 0, 0, 0.54) !important;
+              text-align: center;
+              font-size: 16px;
+              margin-top: -10px;
+            }
+        }
+        i {
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin-top: 20px;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+      .drawItem {
+        // margin-top: 150px;
+        width: 100%;
+        text-align: center;
+        a {
+          color: #000;
+          display: block !important;
+          width: 100%;
+          height: 100%;
+          padding:0;
+          cursor: pointer;
+          &:hover {
+            background-color: #a4a4a4;
+            transition: all 0.3s;
+            color: #fff !important;
+          }
+        }
+      }
+    }
+    @keyframes openDraw {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+    .CloseDrawMenu {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #fff;
+      animation: closeDrawManage 0.3s 1;
+      transform: translateX(100%);
+      display: block !important;
+      .CloseDrawMenuItem {
+        background-color: #fff;
+        height: 100px;
+        display: flex !important;
+        flex-direction: column-reverse;
+        .profile {
+          width: 100%;
+          margin-top: 20px;
+          display: flex !important;
+          flex-direction: column;
+          align-items: center;
+          height: 40%;
+          padding: 0 10px !important;
+          img {
+            border-radius: 50%;
+            width: 60%;
+            margin-right: 5px;
+          }
+          h3 {
+            color: #000 !important;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 10px;
+          }
+          p {
+              padding: 0 !important;
+              margin: 0;
+              color: rgba(0, 0, 0, 0.54) !important;
+              text-align: center;
+              font-size: 16px;
+              margin-top: -10px;
+            }
+        }
+        i {
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin-top: 20px;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+      .drawItem {
+        margin-top: 150px;
+        width: 100%;
+        text-align: center;
+        a {
+          color: #000;
+          display: block !important;
+          width: 100%;
+          height: 100%;
+          padding: 3px 0;
+          cursor: pointer;
+          &:hover {
+            background-color: #a4a4a4;
+            transition: all 0.3s;
+            color: #fff !important;
+          }
+        }
+      }
+    }
+    @keyframes closeDrawManage {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        // transform: translateX(100%);
+      }
+    }
+  }
+      .logo {
+        position: relative;
+        display: block !important;
+        img {
+          cursor: pointer;
+          position: absolute;
+          left: 10px;
+          width: 10% !important;
+        }
+      }
+ }
+}
