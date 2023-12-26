@@ -13,7 +13,14 @@
   .ant-layout-sider-children {
     background-color: #fff;
   }
-
+  .fa-right-from-bracket:before, .fa-sign-out-alt:before {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 25px !important;
+    color: #fff;
+    cursor: pointer;
+  }
   .logo {
     display: flex;
     justify-content: center;
@@ -83,7 +90,7 @@
         h3 {
           color: #000 !important;
           text-align: center;
-          font-size: 25px;
+          font-size: 18px;
           font-weight: 400;
           margin: 0;
         }
@@ -117,6 +124,9 @@
         cursor: pointer;
       }
     }
+    .fa-right-from-bracket:before, .fa-sign-out-alt:before {
+      display: none !important;
+    }
     .OpenDrawMenu {
       position: fixed;
       z-index: 100;
@@ -136,6 +146,7 @@
         .profile {
           width: 100%;
           margin-top: 20px;
+          margin-bottom: 20px;
           display: flex !important;
           flex-direction: column;
           align-items: center;
@@ -156,7 +167,7 @@
           }
           p {
               padding: 0 !important;
-              margin: 0;
+              margin-bottom: 0;
               color: rgba(0, 0, 0, 0.54) !important;
               text-align: center;
               font-size: 16px;
@@ -180,7 +191,7 @@
           color: #000;
           display: block !important;
           width: 100%;
-          height: 100%;
+          // height: 100%;
           padding:0;
           cursor: pointer;
           &:hover {

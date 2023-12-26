@@ -14,7 +14,7 @@ type Props = {};
 
 const Header = (props: Props | any) => {
   console.log(props);
-  const [isOpen, setOpen] = useState<boolean>(false);
+  const [isOpen, setOpen] = useState<string>('');
   const location = useLocation();
   console.log(location.pathname);
   const { userLogin } = useSelector(
@@ -24,7 +24,7 @@ const Header = (props: Props | any) => {
     <div className="header">
       <div
         style={{ display: "none" }}
-        className={isOpen ? "backgroundDark" : ""}
+        className={isOpen==='true' ? "backgroundDark" : ""}
       ></div>
       <div className="logo">
         <img
@@ -128,12 +128,12 @@ const Header = (props: Props | any) => {
       <div
         className="menuMobile"
         onClick={() => {
-          setOpen(!isOpen);
+          setOpen('true');
         }}
       >
         <i className="fa-solid fa-bars"></i>
       </div>
-      {isOpen ? (
+      {isOpen==="true" ? (
         <div className="OpenDrawMenu" style={{ display: "none" }}>
           <div className="OpenDrawMenuItem">
             <div
@@ -142,23 +142,23 @@ const Header = (props: Props | any) => {
                 history.push("/profile");
               }}
             >
-              <img
+              {userLogin.taiKhoan ? <img
                 src={`https://i.pravatar.cc/150?u=${userLogin.taiKhoan}@pravatar.com`}
                 alt=""
-              />
+              /> : ''}
               <NavLink to={"/profile"}>{userLogin.taiKhoan}</NavLink>
             </div>
             <i
               className="fa-solid fa-circle-xmark"
               onClick={() => {
-                setOpen(!isOpen);
+                setOpen('false');
               }}
             ></i>
           </div>
           <div className="drawItem">
             <div
               onClick={() => {
-                setOpen(false);
+                setOpen("false");
               }}
             >
               {location.pathname === "/" ? (
@@ -176,7 +176,7 @@ const Header = (props: Props | any) => {
             </div>
             <div
               onClick={() => {
-                setOpen(false);
+                setOpen("false");
               }}
             >
               {location.pathname === "/" ? (
@@ -194,7 +194,7 @@ const Header = (props: Props | any) => {
             </div>
             <div
               onClick={() => {
-                setOpen(false);
+                setOpen("false");
               }}
             >
               {location.pathname === "/" ? (
@@ -212,7 +212,7 @@ const Header = (props: Props | any) => {
             </div>
             <div
               onClick={() => {
-                setOpen(false);
+                setOpen("false");
               }}
             >
               {location.pathname === "/" ? (
@@ -230,7 +230,7 @@ const Header = (props: Props | any) => {
             </div>
             <div
               onClick={() => {
-                setOpen(false);
+                setOpen("false");
               }}
             >
               {!userLogin.taiKhoan ? (
@@ -241,7 +241,7 @@ const Header = (props: Props | any) => {
             </div>
             <div
               onClick={() => {
-                setOpen(false);
+                setOpen("false");
               }}
             >
               {userLogin.taiKhoan ? (
@@ -261,31 +261,130 @@ const Header = (props: Props | any) => {
             </div>
           </div>
         </div>
-      ) : (
-        <div className="CloseDrawMenu" style={{ display: "none" }}>
+      ) : isOpen==="false" ? (
+        <div className="CloseDrawMenu" style={{ display: "" }}>
           <div className="CloseDrawMenuItem">
             <div className="profile">
-              <img
+             {userLogin.taiKhoan ? <img
                 src={`https://i.pravatar.cc/150?u=${userLogin.taiKhoan}@pravatar.com`}
                 alt=""
-              />
+              /> : ''}
               <NavLink to={"/profile"}>{userLogin.taiKhoan}</NavLink>
             </div>
             <i
               className="fa-solid fa-circle-xmark"
               onClick={() => {
-                setOpen(!isOpen);
+                setOpen('false');
               }}
             ></i>
           </div>
           <div className="drawItem">
-            <div>Lịch chiếu </div>
-            <div>Cụm rạp </div>
-            <div>Tin tức </div>
-            <div>Ứng dụng </div>
+            <div
+              onClick={() => {
+                setOpen('false');
+              }}
+            >
+              {location.pathname === "/" ? (
+                <a href="#lichChieu">Lịch Chiếu</a>
+              ) : (
+                <a
+                  href="#lichChieu"
+                  onClick={() => {
+                    history.push("/");
+                  }}
+                >
+                  Lịch Chiếu
+                </a>
+              )}
+            </div>
+            <div
+              onClick={() => {
+                setOpen("false");
+              }}
+            >
+              {location.pathname === "/" ? (
+                <a href="#cumRap">Cụm Rạp</a>
+              ) : (
+                <a
+                  href="#cumRap"
+                  onClick={() => {
+                    history.push("/");
+                  }}
+                >
+                  Cụm Rạp
+                </a>
+              )}
+            </div>
+            <div
+              onClick={() => {
+                setOpen("false");
+              }}
+            >
+              {location.pathname === "/" ? (
+                <a href="#tinTuc">Tin Tức</a>
+              ) : (
+                <a
+                  href="#tinTuc"
+                  onClick={() => {
+                    history.push("/");
+                  }}
+                >
+                  Tin Tức
+                </a>
+              )}
+            </div>
+            <div
+              onClick={() => {
+                setOpen("false");
+              }}
+            >
+              {location.pathname === "/" ? (
+                <a href="#ungDung">Ứng Dụng</a>
+              ) : (
+                <a
+                  href="#ungDung"
+                  onClick={() => {
+                    history.push("/");
+                  }}
+                >
+                  Ứng Dụng
+                </a>
+              )}
+            </div>
+            <div
+              onClick={() => {
+                setOpen("false");
+              }}
+            >
+              {!userLogin.taiKhoan ? (
+                <NavLink to="/login">Đăng nhập</NavLink>
+              ) : (
+                ""
+              )}
+            </div>
+            <div
+              onClick={() => {
+                setOpen("false");
+              }}
+            >
+              {userLogin.taiKhoan ? (
+                <NavLink
+                  to="/"
+                  onClick={() => {
+                    settings.clearStorage(USER_LOGIN);
+                    settings.clearStorage(ACCESS_TOKEN);
+                    window.location.reload();
+                  }}
+                >
+                  Đăng xuất
+                </NavLink>
+              ) : (
+                <NavLink to="/register">Đăng ký</NavLink>
+              )}
+            </div>
           </div>
         </div>
-      )}
+      ) : ''}
     </div>
   );
 };

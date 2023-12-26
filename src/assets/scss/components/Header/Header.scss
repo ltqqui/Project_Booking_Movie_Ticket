@@ -20,6 +20,7 @@
       width: 20%;
     }
   }
+ 
   .menu {
     width: 50%;
     display: flex;
@@ -232,6 +233,8 @@
       width: 200px;
       animation: closeDraw 0.3s 1;
       transform: translateX(100%);
+      background-color: #fff;
+      height: 100%;
       display: block !important;
       .CloseDrawMenuItem {
         background-color: #fff;
@@ -411,6 +414,8 @@
       top: 0;
       right: 0;
       width: 200px;
+      height: 100%;
+      background-color: #fff;
       animation: closeDraw 0.3s 1;
       transform: translateX(100%);
       display: block !important;

@@ -235,7 +235,6 @@ export const updateUserInformation = createAsyncThunk(
         await history.push("/login");
       }, 2000);
     }
-    return response.data.status;
   }
 );
 

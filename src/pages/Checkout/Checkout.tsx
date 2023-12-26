@@ -116,7 +116,7 @@ const Checkout = (_props: Props) => {
                 </p>
               </div>
               <div className="time">
-                <p>Thời gian giữ vé :{formatTime(timer)}</p>
+                <p>Thời gian giữ vé {formatTime(timer)}</p>
               </div>
           </div>
           <div className="room">

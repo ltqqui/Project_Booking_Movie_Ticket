@@ -75,9 +75,6 @@ const Profile = (props: Props) => {
       console.log(values)
       dispatch(updateUserInformation(changeContent));
     },
-    validationSchema: Yup.object().shape({
-      matKhau:Yup.string().min(8, 'Mật khẩu ít nhất 8 ký tự !.').matches(/[a-zA-Z]/, 'Mật khẩu chỉ chứa các ký tự la tinh !.').required("Mật khẩu không được bỏ trống")
-    })
   });
   useEffect(() => {
     dispatch(getUserInformation());
@@ -202,9 +199,10 @@ const Profile = (props: Props) => {
           setIsModal(false);
         }}
       >
-        <p>Nhập vào mật khẩu cũ</p>
+       <form action="" onSubmit={frmChangePassword.handleSubmit} >
+       <p>Nhập vào mật khẩu cũ</p>
         <input
-          type="text"
+          type="password"
           name="oldPassword"
           onChange={frmChangePassword.handleChange}
         />
@@ -218,7 +216,7 @@ const Profile = (props: Props) => {
           Mật khẩu mới
         </p>
         <input
-          type="text"
+          type="password"
           name="newPassword"
           onChange={frmChangePassword.handleChange}
           style={
@@ -237,7 +235,7 @@ const Profile = (props: Props) => {
           Xác nhận mật khẩu
         </p>
         <input
-          type="text"
+          type="password"
           name="confirmPassword"
           onChange={frmChangePassword.handleChange}
           style={
@@ -246,14 +244,14 @@ const Profile = (props: Props) => {
               : { display: "none" }
           }
         />
-        <button className="update"  style={
-            frmChangePassword.values.oldPassword === frm.values.matKhau
-              ? { display: "block" }
-              : { display: "none" }
-          } onClick={()=>{
-            frmChangePassword.handleSubmit()
+        {frmChangePassword.values.newPassword!== frmChangePassword.values.confirmPassword ? <p style={{color:'red', fontWeight:"400"}}>Mật khẩu chưa khớp !</p>: ''}
+        <button className="update" type="submit" disabled={frmChangePassword.values.newPassword===frmChangePassword.values.confirmPassword && frmChangePassword.values.newPassword!=='' && frmChangePassword.values.confirmPassword!=='' ? false : true}  style={{
+          cursor:frmChangePassword.values.newPassword===frmChangePassword.values.confirmPassword && frmChangePassword.values.newPassword!=='' && frmChangePassword.values.confirmPassword!=='' ? '' : 'no-drop',
+          display:frm.values.matKhau===frmChangePassword.values.oldPassword? 'block' :'none'
+        }} onClick={(e)=>{
             setIsModal(false)
           }}>Cập nhật</button>
+       </form>
       </Modal>
       <div className="content">
         <div className="profile_left">
