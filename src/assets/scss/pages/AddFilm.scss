@@ -69,11 +69,12 @@
           color: #000;
           font-weight: 500;
         }
-        // div{
-        //   color: red;
-        //   text-align: left !important;
-        //   width: 80%;
-        // }
+        .errors{
+          color: red;
+          font-weight: 400;
+          text-align: left !important;
+          width: 80%;
+        }
         input {
           height: 35px;
           font-feature-settings: "tnum", "tnum";

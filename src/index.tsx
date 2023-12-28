@@ -8,6 +8,7 @@ import {
   Routes,
   Route,
   unstable_HistoryRouter as HistoryBrowser,
+  Navigate,
 } from "react-router-dom";
 import { store } from "./redux/configStore";
 import Home from "./pages/Home/Home";
@@ -30,6 +31,8 @@ import AddUser from "./pages/AddUser/AddUser";
 import EditFilm from "./pages/EditFilm/EditFilm";
 import AddFilm from "./pages/AddFlim/AddFilm";
 import Showtime from "./pages/Showtime/Showtime";
+import News from "./pages/News/News";
+import Review from "./pages/Review/Review";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -44,6 +47,12 @@ root.render(
           <Route path="home" element={<Home />}></Route>
           <Route path="detail">
             <Route path=":id" element={<Detail />}></Route>
+          </Route>
+          <Route path="news">
+            <Route path=":id" element={<News />}></Route>
+          </Route>
+          <Route path="review">
+            <Route path=":id" element={<Review />}></Route>
           </Route>
         </Route>
         <Route path="" element={<UserTemplate />}>
@@ -63,6 +72,7 @@ root.render(
           <Route path="manageFilm/editFilm/:idFilm" element={<EditFilm />}></Route>
           <Route path="manageFilm/showtime/:idFilm" element={<Showtime />}></Route>
         </Route>
+        <Route path="*" element={<Navigate to={'/'}/>}></Route>
       </Routes>
     </HistoryBrowser>
   </Provider>

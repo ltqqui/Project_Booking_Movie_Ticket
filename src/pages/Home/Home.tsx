@@ -81,7 +81,9 @@ const items: TabsProps["items"] = [
     label: "ĐIỆN ẢNH 24H",
     children: (
       <div className="dienAnh24h">
-        <div className="card text-left cardDienAnh">
+        <div className="card text-left cardDienAnh" onClick={()=>{
+          history.push(`/news/${arrRandom[0]?.maPhim}`)
+        }}>
           <img
             className="card-img-top"
             src={arrRandom[0]?.hinhAnh}
@@ -92,7 +94,9 @@ const items: TabsProps["items"] = [
             <p className="card-text">{arrRandom[0]?.moTa.length >80 ? arrRandom[0]?.moTa.slice(0,170) + '...' : arrRandom[0]?.moTa}</p>
           </div>
         </div>
-        <div className="card text-left cardDienAnh">
+        <div className="card text-left cardDienAnh" onClick={()=>{
+          history.push(`/news/${arrRandom[1]?.maPhim}`)
+        }}>
           <img
             className="card-img-top"
             src={arrRandom[1]?.hinhAnh}
@@ -110,7 +114,9 @@ const items: TabsProps["items"] = [
     key: "2",
     label: "REVIEW",
     children: <div className="review">
-    <div className="card text-left cardReview">
+    <div className="card text-left cardReview" onClick={()=>{
+      history.push(`/review/${arrRandom[0].maPhim}`)
+    }}>
       <img
         className="card-img-top"
         src={arrRandom[2]?.hinhAnh}
@@ -121,7 +127,9 @@ const items: TabsProps["items"] = [
             <p className="card-text">{arrRandom[2]?.moTa.length >80 ? arrRandom[2]?.moTa.slice(0,170) + '...' : arrRandom[2]?.moTa}</p>
       </div>
     </div>
-    <div className="card text-left cardReview">
+    <div className="card text-left cardReview" onClick={()=>{
+      history.push(`/review/${arrRandom[1].maPhim}`)
+    }}>
       <img
         className="card-img-top"
         src={arrRandom[3]?.hinhAnh}
@@ -146,6 +154,7 @@ const items: TabsProps["items"] = [
   const [number, setNumber]=useState<number>(3)
 
   const renderCardMobile=(number:number)=>{
+
     return danhSachPhim?.slice(0,number).map((item, index)=>{
       return  <div className="cardMobile text-left" key={index} onClick={()=>{
         history.push(`/detail/${item.maPhim}`)
@@ -266,11 +275,11 @@ console.log(lichChieu)
         </Slider>
         <div className="cardMobileRow " style={{ display: "none" }}>
           {renderCardMobile(number)}
-          <button style={number!==3 ? {display:'none'} : {}} className="xemThem" onClick={():void=>{{
-            setNumber(8)
+          <button style={number===danhSachPhim.length ? {display:'none'} : {}} className="xemThem" onClick={():void=>{{
+            setNumber(number>=danhSachPhim.length-1 ? danhSachPhim.length : number+3)
           }}}>XEM THÊM </button>
-           <button style={number!==3 ? {display:'block'} : {display:'none'}} className="xemThem" onClick={()=>{{
-            setNumber(3)
+           <button style={number<=3 ? {display:'none'} : {display:'block'}} className="xemThem" onClick={()=>{{
+            setNumber(number <=4 ? 3 :number-3)
           }}}>ẨN BỚT </button>
         </div>
         <TabsFilm  />
