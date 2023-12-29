@@ -115,7 +115,7 @@ const items: TabsProps["items"] = [
     label: "REVIEW",
     children: <div className="review">
     <div className="card text-left cardReview" onClick={()=>{
-      history.push(`/review/${arrRandom[0].maPhim}`)
+      history.push(`/review/${arrRandom[2].maPhim}`)
     }}>
       <img
         className="card-img-top"
@@ -128,7 +128,7 @@ const items: TabsProps["items"] = [
       </div>
     </div>
     <div className="card text-left cardReview" onClick={()=>{
-      history.push(`/review/${arrRandom[1].maPhim}`)
+      history.push(`/review/${arrRandom[3].maPhim}`)
     }}>
       <img
         className="card-img-top"
