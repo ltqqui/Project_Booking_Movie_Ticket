@@ -225,7 +225,7 @@ const ShowTime = (props: Props) => {
         {/* <img src={phimDetail?.hinhAnh}  alt="" /> */}
 
         <form
-          className="form"
+          className="form_show_time"
           onSubmit={(e) => {
             frm.handleSubmit(e);
             frmHTR.handleSubmit(e);

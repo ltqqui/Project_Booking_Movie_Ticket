@@ -40,9 +40,9 @@
         -moz-box-shadow: 0px 3px 14px 0px rgba(118, 118, 118, 0.75);
         &:hover {
           box-shadow: 0px 3px 14px 0px rgba(159, 158, 158, 0.75);
-        -webkit-box-shadow: 0px 3px 14px 0px rgba(159, 158, 158, 0.75);
-        -moz-box-shadow: 0px 3px 14px 0px rgba(159, 158, 158, 0.75);
-        transition: all 0.3s;
+          -webkit-box-shadow: 0px 3px 14px 0px rgba(159, 158, 158, 0.75);
+          -moz-box-shadow: 0px 3px 14px 0px rgba(159, 158, 158, 0.75);
+          transition: all 0.3s;
         }
       }
       .activity {
@@ -161,11 +161,11 @@
         text-align: center;
       }
       .info_table {
-        width: 1100px !important;
+        width: 100% !important;
         height: 550px !important;
         overflow-y: scroll;
         table {
-          width: 100%;
+          width: 1000px !important;
           color: #fff;
           tr {
             padding: 10px 0;
@@ -352,6 +352,9 @@
           text-align: center;
         }
         .info_table {
+          width: 100% !important;
+          height: 550px !important;
+          overflow-y: scroll;
           table {
             width: 1000px !important;
             color: #fff;
@@ -483,7 +486,7 @@
           display: none;
         }
         #rc-tabs-0-panel-2 {
-          height: 550px;
+          height: 450px;
           overflow-y: scroll;
         }
         ::-webkit-scrollbar {
@@ -510,6 +513,9 @@
           text-align: center;
         }
         .info_table {
+          width: 100% !important;
+          height: 450px !important;
+          overflow-y: scroll;
           table {
             width: 1000px !important;
             color: #fff;
@@ -588,103 +594,108 @@
       }
       .profile_right {
         width: 100%;
+        height: 400px !important;
         margin-top: 50px;
         .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
         .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
           display: flex;
           justify-content: center;
         }
-        .info_table {
-          .form_profile {
-            width: 100%;
-            p {
-              margin: 0;
-              margin-top: 15px;
-              margin-bottom: 10px;
-              color: #fff;
-              font-weight: 600;
-            }
-            input {
-              height: 40px;
-              border: 1px solid #fff;
-              outline: none;
-              width: 100% !important;
-              border-radius: 15px;
-              padding: 0 10px;
-              background: transparent;
-              color: #fff;
-            }
-            ::placeholder {
-              color: #fff;
-            }
-            div {
-              color: rgb(255, 41, 41);
-            }
-            .change_password {
-              display: none;
-              width: 100% !important;
-              padding: 8px 0;
-              background-color: #215ca0;
-              border: none;
-              border-radius: 8px;
-              margin: 0;
-              margin-top: 20px;
-              color: #fff;
-              text-align: center;
-              cursor: pointer;
-              &:hover {
-                background-color: #1b487b;
-                transition: all 0.3s;
-              }
-            }
-            .update {
-              width: 100% !important;
-              padding: 8px 0;
-              background-color: #429321;
-              border: none;
-              border-radius: 8px;
-              margin-top: 20px;
-              color: #fff;
-              &:hover {
-                background-color: #316c19;
-                transition: all 0.3s;
-              }
-            }
-          }
-        }
-        .ant-tabs-top > .ant-tabs-nav::before,
-        .ant-tabs-top > div > .ant-tabs-nav::before {
-          display: none;
-        }
-        #rc-tabs-0-panel-2 {
-          height: 500px;
-          overflow-y: scroll;
-        }
-        ::-webkit-scrollbar {
-          width: 5px !important;
-          background-color: #fff !important;
-        }
-
-        ::-webkit-scrollbar-thumb {
-          background-color: #8b8b8b !important;
-          border-radius: 5px !important;
-        }
-        .ant-tabs-tab-btn {
-          h5 {
-            color: #fff;
-            font-size: 16px;
-          }
-        }
-        table,
-        th,
-        td {
-          border: 1px solid #949191;
-          border-collapse: collapse;
-          padding: 15px 0;
-          text-align: center;
-        }
-        table {
+        .form_profile {
           width: 100%;
+          p {
+            margin: 0;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: 600;
+          }
+          input {
+            height: 40px;
+            border: 1px solid #fff;
+            outline: none;
+            width: 100% !important;
+            border-radius: 15px;
+            padding: 0 10px;
+            background: transparent;
+            color: #fff;
+          }
+          ::placeholder {
+            color: #fff;
+          }
+          div {
+            color: rgb(255, 41, 41);
+          }
+          .change_password {
+            display: none;
+            width: 100% !important;
+            padding: 8px 0;
+            background-color: #215ca0;
+            border: none;
+            border-radius: 8px;
+            margin: 0;
+            margin-top: 20px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+              background-color: #1b487b;
+              transition: all 0.3s;
+            }
+          }
+          .update {
+            width: 100% !important;
+            padding: 8px 0;
+            background-color: #429321;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            color: #fff;
+            &:hover {
+              background-color: #316c19;
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+      .ant-tabs-top > .ant-tabs-nav::before,
+      .ant-tabs-top > div > .ant-tabs-nav::before {
+        display: none;
+      }
+      #rc-tabs-0-panel-2 {
+        height: 400px;
+        overflow-y: scroll;
+      }
+      ::-webkit-scrollbar {
+        width: 5px !important;
+        background-color: #fff !important;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #8b8b8b !important;
+        border-radius: 5px !important;
+      }
+      .ant-tabs-tab-btn {
+        h5 {
+          color: #fff;
+          font-size: 16px;
+        }
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #949191;
+        border-collapse: collapse;
+        padding: 15px 0;
+        text-align: center;
+      }
+      .info_table {
+        width: 100% !important;
+        height: 100vh !important;
+        overflow-y: scroll;
+        table {
+          width: 1000px !important;
+          height: 1000px !important;
           color: #fff;
           tr {
             padding: 10px 0;

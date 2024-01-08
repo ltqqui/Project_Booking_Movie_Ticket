@@ -4,7 +4,7 @@
       text-align: center;
       color: #1890ff;
     }
-    form {
+    .form_add_film {
       margin-top: 50px;
       display: flex;
       flex-direction: column;
@@ -142,3 +142,19 @@
       }
   }
   
+
+    
+@media screen and (max-width: 600px) {
+  .form_add_film{
+    .content_form {
+      flex-direction: column;
+      .edit_left {
+        width: 100% !important;
+        flex-direction: column;
+      }
+      .edit_right{
+        width: 100% !important;
+      }
+    }
+  }
+}

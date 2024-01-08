@@ -52,7 +52,7 @@ const EditUser = (props: Props) => {
         history.push('/manage/manageUser')
       }} />
       <h3>CẬP NHẬT NGƯỜI DÙNG</h3>
-      <form className="form" onSubmit={frm.handleSubmit}>
+      <form className="form_edit_user" onSubmit={frm.handleSubmit}>
         <div className="content_form">
           <div className="edit_left">
             <p>Tài khoản</p>

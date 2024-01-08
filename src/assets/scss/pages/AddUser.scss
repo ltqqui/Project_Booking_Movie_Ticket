@@ -4,7 +4,7 @@
       text-align: center;
       color: #74c1fb;
     }
-    form {
+    .form_add_user {
       margin-top: 50px;
       display: flex;
       flex-direction: column;
@@ -74,7 +74,6 @@
         input {
           height: 35px;
           font-feature-settings: "tnum", "tnum";
-          // background-color: #fff;
           font-weight: 400;
           background-image: none;
           border: none;
@@ -119,3 +118,17 @@
     }
   }
   
+@media screen and (max-width: 600px) {
+  .form_add_user{
+    .content_form {
+      flex-direction: column;
+      .add_left {
+        width: 100% !important;
+        flex-direction: column;
+      }
+      .add_right{
+        width: 100% !important;
+      }
+    }
+  }
+}

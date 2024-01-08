@@ -106,7 +106,7 @@ const AddFilm = (props: Props) => {
         }}
       />
       <h3>THÊM MỚI PHIM</h3>
-      <form className="form" onSubmit={frm.handleSubmit}>
+      <form className="form_add_film" onSubmit={frm.handleSubmit}>
         <div className="content_form">
           <div className="edit_left">
             <p>Tên phim</p>
@@ -172,7 +172,7 @@ const AddFilm = (props: Props) => {
            {frm.errors.tenPhim !==''? <p className="errors">{frm.errors.moTa?.toString()}</p>: <p></p>}
           </div>
         </div>
-        <button className="add" type="submit">Cập nhật</button>
+        <button className="add" type="submit">Thêm</button>
       </form>
     </div>
   );

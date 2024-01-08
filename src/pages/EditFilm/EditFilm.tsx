@@ -102,7 +102,7 @@ const EditFilm = (props: Props) => {
         }}
       />
       <h3>CẬP NHẬT PHIM</h3>
-      <form className="form" onSubmit={frm.handleSubmit}>
+      <form className="form_edit_film" onSubmit={frm.handleSubmit}>
         <div className="content_form">
           <div className="edit_left">
             <p>Mã phim</p>

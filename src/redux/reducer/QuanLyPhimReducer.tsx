@@ -11,6 +11,8 @@ export type DanhSachBannerModel= {
     maBanner: number;
     maPhim:   number;
     hinhAnh:  string;
+    trailer:string;
+    tenPhim:string;
 }
 
 export interface PhimDetailModel {
@@ -88,6 +90,7 @@ export type FilmState={
     phimDetail:PhimDetailModel |null ;
     danhSachPhimMange:DanhSachPhimModel[];
     phimEdit:PhimDetailModel | null;
+    danhSachDetailBanner:PhimDetailModel[]
 }
 
 const initialState:FilmState = {
@@ -95,7 +98,8 @@ const initialState:FilmState = {
     danhSachPhim:[],
     phimDetail: null,
     danhSachPhimMange:[],
-    phimEdit:null
+    phimEdit:null,
+    danhSachDetailBanner:[]
 }
 
 const QuanLyPhimReducer = createSlice({
@@ -133,7 +137,16 @@ export const setDanhSachBannerApi=()=>{
                 url:`${DOMAIN}QuanLyPhim/LayDanhSachBanner`,
                 method:"GET"
             })
-            const content:DanhSachBannerModel[]=data.content;
+            let arrDetailBanner:any=[]
+            let objDetailBanner:any={};
+            for(const i in data.content){
+                const result= await http.get(`QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${data.content[i].maPhim}`)
+                if((await result).status===STATUS_CODE.SUCCESS){
+                    objDetailBanner={...data.content[i],trailer:result.data.content.trailer,tenPhim:result.data.content.tenPhim}
+                    arrDetailBanner.push(objDetailBanner);
+                }
+            }
+            const content:DanhSachBannerModel[]=arrDetailBanner;
             const action:PayloadAction<DanhSachBannerModel[]>=setDanhSachBanner(content);
             dispatch(action)
         } catch (error) {

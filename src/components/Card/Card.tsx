@@ -33,7 +33,7 @@ const Card = (props: Props) => {
   return (
     <div className="card text-left">
      
-      <Modal title={`Trailer ${props.item?.tenPhim}`} width={700} bodyStyle={{height:'400px'}} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal  title={`Trailer ${props.item?.tenPhim}`} footer='' width={700} bodyStyle={{height:'400px'}} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
        <iframe ref={iframeRef} src={url}   allow="autoplay; fullscreen; picture-in-picture" style={{width:'100%', height:'100%'}}></iframe>
       </Modal>
       <div className="imgFilm">

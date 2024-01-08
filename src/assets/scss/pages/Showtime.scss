@@ -158,3 +158,17 @@
    }
   }
 }
+
+@media screen and(max-width:600px) {
+    .showtime_film_form{
+      .content_form{
+        flex-direction: column;
+        .edit_left{
+          width: 100% !important;
+        }
+        .edit_right{
+          width: 100% !important;
+        }
+      }
+    }
+    }

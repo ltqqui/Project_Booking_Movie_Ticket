@@ -51,7 +51,7 @@ const AddUser = (props: Props) => {
         history.push('/manage/manageUser')
       }} />
       <h3>THÊM NGƯỜI DÙNG</h3>
-      <form className="form" onSubmit={frm.handleSubmit}>
+      <form className="form_add_user" onSubmit={frm.handleSubmit}>
         <div className="content_form">
           <div className="add_left">
             <p>Tài khoản</p>
