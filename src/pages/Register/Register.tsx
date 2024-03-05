@@ -24,8 +24,6 @@ const Register = (props: Props) => {
         maNhom:'GP00'
     },
     onSubmit:(value)=>{
-      console.log(value)
-      console.log(123)
       dispatch(postUserRegisterApi(value))
     },
     validationSchema:Yup.object().shape({

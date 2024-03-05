@@ -41,7 +41,6 @@ const Profile = (props: Props) => {
       taiKhoan: userInfomation?.taiKhoan || "",
     },
     onSubmit: (values: UserUpdateModel) => {
-      console.log(values);
       dispatch(updateUserInformation(values));
     },
     validationSchema:Yup.object().shape({
@@ -72,7 +71,6 @@ const Profile = (props: Props) => {
         soDT: userInfomation?.soDT || "",
         taiKhoan: userInfomation?.taiKhoan || "",
       }
-      console.log(values)
       dispatch(updateUserInformation(changeContent));
     },
   });

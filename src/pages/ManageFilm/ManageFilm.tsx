@@ -37,9 +37,7 @@ const ManageFilm = (props: Props) => {
      iframeRef.current.src += '?autoplay=0'
      setUrl('');
  
-   };
-   console.log(danhSachPhimMange)
- 
+   }; 
    const handleCancel = () => {
      setIsModalOpen(false);
      iframeRef.current.src += '?autoplay=0'

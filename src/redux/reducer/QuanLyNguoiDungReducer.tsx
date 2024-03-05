@@ -227,7 +227,6 @@ export const updateUserInformation = createAsyncThunk(
       `QuanLyNguoiDung/CapNhatThongTinNguoiDung`,
       info
     );
-    console.log(response);
     if (response.status === STATUS_CODE.SUCCESS) {
       setTimeout(async () => {
         await dispatch(setLoading(false));

@@ -9,7 +9,6 @@ type Props = {};
 
 const CheckoutTemplate = (props: Props) => {
   const errorCheckout = () => {
-    console.log(123);
     Modal.confirm({
       title: "Quyền truy cập ",
       content:

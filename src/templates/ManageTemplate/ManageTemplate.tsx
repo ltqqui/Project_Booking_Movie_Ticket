@@ -22,7 +22,6 @@ const ManageTemplate = (props: Props) => {
     const [collapsed, setCollapsed] = useState(false);
     const {userLogin}= useSelector((state:RootState)=> state.QuanLyNguoiDungReducer);
     const [isOpen,setOpen] =useState('')
-    // console.log()
     
     const errorManageMent = () => {
       Modal.confirm({

@@ -21,8 +21,6 @@ export const STATUS_CODE = {
 export const settings = {
   setStorageJson: (name: string, data: any): void => {
     data = JSON.stringify(data);
-    // console.log(name);
-    // console.log(data);
     localStorage.setItem(name, data);
   },
   setStorage: (name: string, data: string): void => {

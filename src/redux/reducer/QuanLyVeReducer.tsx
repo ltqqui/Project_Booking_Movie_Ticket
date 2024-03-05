@@ -89,7 +89,6 @@ const QuanLyVeReducer = createSlice({
     },
     deleteGheDangDat:(state)=>{
       state.danhSachGheDangDat=[]
-      console.log(state.danhSachGheDangDat)
     },
     setHinhAnhRap:(state, action)=>{
       state.hinhAnhRap=action.payload

@@ -47,7 +47,7 @@ const Checkout = (_props: Props) => {
 
 
   const onChange = (e: RadioChangeEvent) => {
-    console.log("radio checked", e.target.value);
+    // console.log("radio checked", e.target.value);
     setValue(e.target.value);
   };
   const renderGhe = () => {

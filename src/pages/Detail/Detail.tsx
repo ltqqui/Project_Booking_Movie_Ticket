@@ -19,7 +19,6 @@ const Detail = (props: Props |any) => {
   const [trailerMobile, setTrailerMobile]= useState<boolean>(false);
   const [url, setUrl]=useState<string|undefined>('');
   let iframeRef:any=useRef(null);
-  console.log(phimDetail)
   useEffect(() => {
     window.onresize = () => {
       setWidthScreen(window.innerWidth);

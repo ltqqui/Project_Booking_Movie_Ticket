@@ -33,7 +33,6 @@ const Review = (props: Props) => {
     dispatch(getPhimDetailApi(id));
     dispatch(getDanhSacPhimApi(true));
   }, []);
-  console.log(phimDetail);
   return (
     <div className="review_page">
       <div className="review_page_left">

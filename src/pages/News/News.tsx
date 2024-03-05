@@ -33,7 +33,6 @@ const News = (props: Props) => {
     dispatch(getPhimDetailApi(id));
     dispatch(getDanhSacPhimApi(true));
   }, []);
-  console.log(phimDetail);
   return (
     <div className="news_page">
       <div className="news_page_left">

@@ -200,7 +200,6 @@ const Home = (props: Props | any) => {
       );
     });
   };
-
   const [number, setNumber] = useState<number>(3);
 
   const renderCardMobile = (number: number) => {
@@ -229,7 +228,6 @@ const Home = (props: Props | any) => {
       dispatch(setLoading(false));
     }, 2000);
   }, []);
-  console.log(danhSachPhim)
 
   const handleCancel = () => {
     setIsModalOpen(false);

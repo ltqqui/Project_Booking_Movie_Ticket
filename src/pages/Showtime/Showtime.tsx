@@ -88,7 +88,6 @@ const ShowTime = (props: Props) => {
     },
     onSubmit: (values: any) => {
       dispatch(taoLichChieuApi(values));
-      console.log(values);
     },
     validationSchema: Yup.object().shape({
       maRap: Yup.string().required("Mã rạp không được bỏ trống !"),
@@ -121,7 +120,6 @@ const ShowTime = (props: Props) => {
     frm.setFieldValue("giaVe", value);
     setOpenGiaVe(false);
   };
-  console.log(phimDetail)
   useEffect(() => {
     dispatch(layThongTinHeThongRapShowtimeApi());
     dispatch(getPhimDetailApi(idFilm));
@@ -143,7 +141,6 @@ const ShowTime = (props: Props) => {
       )
     )
   : [];
-  console.log(data)
   const columns: ColumnsType<DataType> = [
     {
       title: "Hệ thống rạp",
