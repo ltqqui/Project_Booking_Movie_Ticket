@@ -229,6 +229,7 @@ const Home = (props: Props | any) => {
       dispatch(setLoading(false));
     }, 2000);
   }, []);
+  console.log(danhSachPhim)
 
   const handleCancel = () => {
     setIsModalOpen(false);
