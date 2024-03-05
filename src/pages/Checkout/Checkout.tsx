@@ -14,12 +14,24 @@ import {
 import _ from "lodash";
 import { UserOutlined } from "@ant-design/icons";
 import { layThongTinHeThongRapApi } from "../../redux/reducer/QuanLyRapReducer";
+import { getUserInformation } from "../../redux/reducer/QuanLyNguoiDungReducer";
 type Props = {};
 
 const Checkout = (_props: Props) => {
   const [value, setValue] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [timer, setTimer] = useState(420);
+  const { danhSachPhongVe, danhSachGheDangDat, hinhAnhRap } = useSelector(
+    (state: RootState) => state.QuanLyVeReducer
+  );
+  const { thongTinHeThongRap } = useSelector(
+    (state: RootState) => state.QuanLyRapReducer
+  );
+    const { userLogin, userInfomation } = useSelector(
+    (state: RootState) => state.QuanLyNguoiDungReducer
+  );
+  const { id } = useParams();
+  const dispatch: DispatchType = useDispatch();
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -33,17 +45,7 @@ const Checkout = (_props: Props) => {
 
   };
 
-  const { danhSachPhongVe, danhSachGheDangDat, hinhAnhRap } = useSelector(
-    (state: RootState) => state.QuanLyVeReducer
-  );
-  const { thongTinHeThongRap } = useSelector(
-    (state: RootState) => state.QuanLyRapReducer
-  );
-    const { userLogin } = useSelector(
-    (state: RootState) => state.QuanLyNguoiDungReducer
-  );
-  const { id } = useParams();
-  const dispatch: DispatchType = useDispatch();
+
   const onChange = (e: RadioChangeEvent) => {
     console.log("radio checked", e.target.value);
     setValue(e.target.value);
@@ -97,6 +99,7 @@ const Checkout = (_props: Props) => {
   useEffect(() => {
     dispatch(getDanhSachPhongveApi(id));
     dispatch(layThongTinHeThongRapApi());
+    dispatch(getUserInformation());
     const intervalId = setInterval(() => {
       setTimer((prevTimer) => prevTimer - 1);
     }, 1000);
@@ -179,11 +182,11 @@ const Checkout = (_props: Props) => {
           </div>
           <div className="email">
             <span>E-mail</span>
-            <p>lamthanhquihgs@gmail.com</p>
+            <p>{userLogin?.email}</p>
           </div>
           <div className="phone">
             <span>Phone</span>
-            <p>0941003224</p>
+            <p>{userInfomation?.soDT}</p>
           </div>
           <div className="hinh_thuc_thanh_toan">
             <span>Hình thức thanh toán</span>
