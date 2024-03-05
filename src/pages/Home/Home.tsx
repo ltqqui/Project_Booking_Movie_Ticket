@@ -229,8 +229,6 @@ const Home = (props: Props | any) => {
       dispatch(setLoading(false));
     }, 2000);
   }, []);
-  console.log(danhSachDetailBanner);
-  console.log(danhSachBanner);
 
   const handleCancel = () => {
     setIsModalOpen(false);
@@ -282,7 +280,7 @@ const Home = (props: Props | any) => {
           />
         </div>
         <div className="carousel-inner">
-          {danhSachBanner.map((item: DanhSachBannerModel, index: number) => {
+          {/* {danhSachBanner.map((item: DanhSachBannerModel, index: number) => {
             return (
               <div
                 className={
@@ -305,7 +303,64 @@ const Home = (props: Props | any) => {
                 />
               </div>
             );
-          })}
+          })} */}
+           <div
+                className={
+                  "carousel-item active " 
+                } style={{cursor:'pointer'}}
+              >
+                <img src={danhSachBanner[0]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
+                  history.push(`/detail/${11451}`)
+                }} />
+                <img
+                  className="play"
+                  src="/img/logo/play-video.png"
+                  alt=""
+                  onClick={() => {
+                    showModal();
+                    setTenPhim(danhSachBanner[0]?.tenPhim)
+                    setUrl(danhSachBanner[0]?.trailer);
+                  }}
+                />
+              </div>
+              <div
+                className={
+                  "carousel-item  " 
+                } style={{cursor:'pointer'}}
+              >
+                <img src={danhSachBanner[1]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
+                  history.push(`/detail/${11448}`)
+                }} />
+                <img
+                  className="play"
+                  src="/img/logo/play-video.png"
+                  alt=""
+                  onClick={() => {
+                    showModal();
+                    setTenPhim(danhSachBanner[1]?.tenPhim)
+                    setUrl(danhSachBanner[1]?.trailer);
+                  }}
+                />
+              </div>
+              <div
+                className={
+                  "carousel-item  " 
+                } style={{cursor:'pointer'}}
+              >
+                <img src={danhSachBanner[2]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
+                  history.push(`/detail/${11477}`)
+                }} />
+                <img
+                  className="play"
+                  src="/img/logo/play-video.png"
+                  alt=""
+                  onClick={() => {
+                    showModal();
+                    setTenPhim(danhSachBanner[2]?.tenPhim)
+                    setUrl(danhSachBanner[2]?.trailer);
+                  }}
+                />
+              </div>
         </div>
         <button
           className="carousel-control-prev"

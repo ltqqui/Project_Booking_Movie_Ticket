@@ -17,7 +17,6 @@ const HomeTemplate = (props: Props |any) => {
   })
  
 
-  console.log(location.pathname);
   return (
     <>
         <Header />

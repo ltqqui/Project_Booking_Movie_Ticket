@@ -11,19 +11,20 @@ type Props = {};
 const Detail = (props: Props |any) => {
   const { id } = useParams<string>();
   const {userLogin}= useSelector((state:RootState)=> state.QuanLyNguoiDungReducer);
+  const { phimDetail } = useSelector(
+    (state: RootState) => state.QuanLyPhimReducer
+  );
   const [bottomDetail, setBottomDetail] = useState<string>("lich_chieu");
   const [widthScreen, setWidthScreen] = useState<number>(window.innerWidth);
   const [trailerMobile, setTrailerMobile]= useState<boolean>(false);
   const [url, setUrl]=useState<string|undefined>('');
   let iframeRef:any=useRef(null);
+  console.log(phimDetail)
   useEffect(() => {
     window.onresize = () => {
       setWidthScreen(window.innerWidth);
     };
   }, []);
-  const { phimDetail } = useSelector(
-    (state: RootState) => state.QuanLyPhimReducer
-  );
     
   const dispatch: DispatchType = useDispatch();
   useEffect(() => {

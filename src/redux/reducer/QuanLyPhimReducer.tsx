@@ -158,7 +158,6 @@ export const setDanhSachBannerApi=()=>{
 export const getDanhSacPhimApi=createAsyncThunk("QuanLyPhimReducer/getDanhSachPhimApi", 
     async (trangThai:boolean)=>{
         const response= await http.get(`QuanLyPhim/LayDanhSachPhim?maNhom=${GROUP}`)
-        console.log(trangThai)
         return response.data.content.filter((phim:any)=> phim.dangChieu===trangThai)
     }
 )

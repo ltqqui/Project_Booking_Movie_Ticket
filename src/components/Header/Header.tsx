@@ -13,10 +13,8 @@ import { history } from "../../utils/lib/libs";
 type Props = {};
 
 const Header = (props: Props | any) => {
-  console.log(props);
   const [isOpen, setOpen] = useState<string>('');
   const location = useLocation();
-  console.log(location.pathname);
   const { userLogin } = useSelector(
     (state: RootState) => state.QuanLyNguoiDungReducer
   );
