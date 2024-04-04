@@ -1,6 +1,4 @@
 .footer {
-  // margin-top: 100px;
-  // display: none;
   .footerTop {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -121,7 +119,7 @@
       h4 {
         text-align: center;
         margin-bottom: 10px;
-        font-size: 16px;
+        font-size: 17px;
         color: #fff;
       }
     }
@@ -167,10 +165,110 @@
 @media screen and (max-width:600px) {
     .footer{
       margin-top: 100px;
+      .footerTop{
+        .footerTopLeft{
+          grid-column-start: 2;
+          grid-column-end: 8;
+        }
+        .footerTopRight {
+          margin-top: 100px;
+          grid-column-start: 9;
+          grid-column-end: 12;
+          position: relative;
+          height: 500px;
+          .mobileApp {
+            width: 100%;
+            img {
+              width: 100
+            }
+          }
+          .slick {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 80%;
+            height: 100%;
+            border-radius: 10px;
+            .slick-list {
+              border-radius: 25px;
+              width: 100%;
+              height: 100%;
+              padding: 0;
+              margin-left: 7px;
+            }
+            .slick-slide {
+              padding: 0;
+              border-radius: 10px;
+              width: 100%;
+              height: 100%;
+              border-radius: 15px;
+              img {
+                height: 100%;
+                width: 100%;
+                border-radius:0 0 15px 15px;
+                // border-radius: 0;
+              }
+            }
+            .slick-dots li button:before {
+              display: none;
+            }
+            button {
+              display: none !important;
+            }
+          }
+        }
+      }
       .footerBottom{
         display: flex ;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+        .col_1{
+          width: 50%;
+          text-align: center;
+        }
+        .col_2{
+          width: 50%;
+        }
+        .col_3{
+          margin-bottom: 20px;
+          width:100%;
+          h4{
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 17px !important;
+            font-weight: 500;
+            color: #fff;
+          }
+        }
+        .col_4{
+          width: 40%;
+          margin-right: 20px;
+          h4{
+           margin-bottom: 20px; 
+          }
+          .mobileAppBottom{
+            display: flex;
+            justify-content: space-around;
+            img{
+              width: 25%;
+            }
+          }
+        }
+        .col_5{
+          width: 40%;
+          margin-left: 10px;
+          h4{
+            margin-bottom: 20px; 
+           }
+           .socialApp{
+            display: flex;
+            justify-content: space-around;
+            img{
+              width: 25%;
+            }
+           }
+        }
         .footerBottomItem{
           margin-top: 30px;
         }
