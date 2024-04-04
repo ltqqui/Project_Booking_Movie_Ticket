@@ -27,7 +27,7 @@ const Checkout = (_props: Props) => {
   const { thongTinHeThongRap } = useSelector(
     (state: RootState) => state.QuanLyRapReducer
   );
-    const { userLogin, userInfomation } = useSelector(
+    const { userLogin } = useSelector(
     (state: RootState) => state.QuanLyNguoiDungReducer
   );
   const { id } = useParams();
@@ -53,7 +53,7 @@ const Checkout = (_props: Props) => {
   const renderGhe = () => {
     return danhSachPhongVe?.danhSachGhe.map((ghe, index) => {
       const classGheDaDat = ghe.daDat === true ? "gheDaDat" : "";
-      const classGheVip = ghe.loaiGhe === "Vip" ? "gheVip" : "";
+      const classGheVip = ghe.loaiGhe === "Vip" && ghe.daDat===false ? "gheVip" : "";
       const classGheTuDat =
         ghe.taiKhoanNguoiDat === userLogin.taiKhoan ? "gheTuDat" : "";
       let classGheDangDat: string = "";
@@ -97,9 +97,8 @@ const Checkout = (_props: Props) => {
     return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
   };
   useEffect(() => {
-    dispatch(getDanhSachPhongveApi(id));
     dispatch(layThongTinHeThongRapApi());
-    dispatch(getUserInformation());
+    dispatch(getDanhSachPhongveApi(id));
     const intervalId = setInterval(() => {
       setTimer((prevTimer) => prevTimer - 1);
     }, 1000);
@@ -186,7 +185,7 @@ const Checkout = (_props: Props) => {
           </div>
           <div className="phone">
             <span>Phone</span>
-            <p>{userInfomation?.soDT}</p>
+            <p>{userLogin?.soDT}</p>
           </div>
           <div className="hinh_thuc_thanh_toan">
             <span>Hình thức thanh toán</span>

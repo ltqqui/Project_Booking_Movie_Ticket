@@ -37,6 +37,10 @@ const ManageTemplate = (props: Props) => {
   if(userLogin.maLoaiNguoiDung==='QuanTri'){
     return (
       <div className='manageTemplate'>
+        <div
+        style={{ display: "none" }}
+        className={isOpen==='true' ? "backgroundDark" : ""}
+      ></div>
            <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
           <div className="logo" >
@@ -93,7 +97,7 @@ const ManageTemplate = (props: Props) => {
                   src={`https://i.pravatar.cc/150?u=${userLogin.taiKhoan}@pravatar.com`}
                   alt=""
                 />
-                 <h3>{userLogin.hoTen}</h3>
+                 <h3 >{userLogin.hoTen}</h3>
                   <p>Senior Developer</p>
               </div>
               <i

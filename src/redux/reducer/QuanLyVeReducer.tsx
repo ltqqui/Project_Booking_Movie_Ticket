@@ -128,9 +128,9 @@ export const datVeApi = createAsyncThunk(
   async (danhSachVe: DatVeModel, { dispatch }) => {
     const response = await http.post("QuanLyDatVe/DatVe", danhSachVe);
     if (response.status === STATUS_CODE.SUCCESS) {
-      openNotificationWithIcon("success", "Đặt vé thành công !");
-      dispatch( deleteGheDangDat())
-      dispatch(getDanhSachPhongveApi(danhSachVe.maLichChieu))
+      await dispatch( deleteGheDangDat())
+      await dispatch(getDanhSachPhongveApi(danhSachVe.maLichChieu))
+      await openNotificationWithIcon("success", "Đặt vé thành công !");
     }
   }
 );
