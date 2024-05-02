@@ -21,6 +21,7 @@ import { history } from "../../utils/lib/libs";
 import { useParams, useLocation } from "react-router-dom";
 import { setLoading } from "../../redux/reducer/LoadingReducer";
 import Modal from "antd/lib/modal/Modal";
+import { Carousel } from "react-bootstrap";
 
 type Props = {};
 
@@ -251,64 +252,10 @@ const Home = (props: Props | any) => {
           style={{ width: "100%", height: "100%" }}
         ></iframe>
       </Modal>
-      <div
-        id="carouselExampleIndicators"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to={0}
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to={1}
-            aria-label="Slide 2"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to={2}
-            aria-label="Slide 3"
-          />
-        </div>
-        <div className="carousel-inner">
-          {/* {danhSachBanner.map((item: DanhSachBannerModel, index: number) => {
-            return (
-              <div
-                className={
-                  index === 1 ? "carousel-item active " : "carousel-item"
-                } style={{cursor:'pointer'}}
-                key={index}
-              >
-                <img src={item.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
-                  history.push(`/detail/${item.maPhim}`)
-                }} />
-                <img
-                  className="play"
-                  src="/img/logo/play-video.png"
-                  alt=""
-                  onClick={() => {
-                    showModal();
-                    setTenPhim(item.tenPhim)
-                    setUrl(item.trailer);
-                  }}
-                />
-              </div>
-            );
-          })} */}
-           <div
-                className={
-                  "carousel-item active " 
-                } style={{cursor:'pointer'}}
-              >
-                <img src={danhSachBanner[0]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
+      <Carousel>
+      <Carousel.Item interval={1000}>
+        {/* <ExampleCarouselImage text="First slide" /> */}
+        <img src={danhSachBanner[0]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
                   history.push(`/detail/${11451}`)
                 }} />
                 <img
@@ -321,13 +268,11 @@ const Home = (props: Props | any) => {
                     setUrl(danhSachBanner[0]?.trailer);
                   }}
                 />
-              </div>
-              <div
-                className={
-                  "carousel-item  " 
-                } style={{cursor:'pointer'}}
-              >
-                <img src={danhSachBanner[1]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={500}>
+         <img src={danhSachBanner[1]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
                   history.push(`/detail/${11448}`)
                 }} />
                 <img
@@ -340,13 +285,11 @@ const Home = (props: Props | any) => {
                     setUrl(danhSachBanner[1]?.trailer);
                   }}
                 />
-              </div>
-              <div
-                className={
-                  "carousel-item  " 
-                } style={{cursor:'pointer'}}
-              >
-                <img src={danhSachBanner[2]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={danhSachBanner[2]?.hinhAnh} className="d-block w-100" alt="..."  onClick={()=>{
                   history.push(`/detail/${11477}`)
                 }} />
                 <img
@@ -359,27 +302,11 @@ const Home = (props: Props | any) => {
                     setUrl(danhSachBanner[2]?.trailer);
                   }}
                 />
-              </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
 
       <div className="dangChieuSapChieu" id="lichChieu">
         <button

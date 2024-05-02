@@ -33,6 +33,7 @@ import AddFilm from "./pages/AddFlim/AddFilm";
 import Showtime from "./pages/Showtime/Showtime";
 import News from "./pages/News/News";
 import Review from "./pages/Review/Review";
+import 'bootstrap/dist/css/bootstrap.min.css';
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
